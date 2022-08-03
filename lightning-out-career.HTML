@@ -1,0 +1,41 @@
+<html>
+
+<style>
+  a {
+    color: blue;
+  }
+</style>
+
+<script src="https://full-polyworks.cs226.force.com/lightning/lightning.out.js"></script>
+
+<div data-lightning-out="true"></div>
+
+  <script>
+    const appName = 'c:Wrapper_Public_CareersWebsite_IM_EN';
+    const componentName = 'c:iCimsJobs';
+    const lightningEndpoint = 'https://full-polyworks.cs226.force.com/';
+    const targetElement = document.querySelector("[data-lightning-out]");
+    const componentAttributes = {Language: 'English'
+
+    };
+
+    $Lightning.use(
+            appName,
+            function (){
+              $Lightning.createComponent(
+                      componentName,
+                      componentAttributes,
+                      targetElement,
+                      function (cmp){
+                        console.log('lightning component created');
+                      }
+              );
+            },
+            lightningEndpoint
+    );
+
+
+  </script>
+
+
+</html>
