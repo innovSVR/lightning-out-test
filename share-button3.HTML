@@ -1,0 +1,35 @@
+<html>
+
+<script src="https://innovmetric--full.my.salesforce.com/lightning/lightning.out.js"></script>
+
+<div data-lightning-out="true"></div>
+
+  <script>
+    const appName = 'c:Wrapper_Public_ShareButton';
+    const componentName = 'c:shareButton';
+    const lightningEndpoint = 'https://innovmetric--full.my.salesforce.com';
+    const targetElement = document.querySelector("[data-lightning-out]");
+    const componentAttributes = {
+      
+    };
+
+    $Lightning.use(
+            appName,
+            function (){
+              $Lightning.createComponent(
+                      componentName,
+                      componentAttributes,
+                      targetElement,
+                      function (cmp){
+                        console.log('lightning component created');
+                      }
+              );
+            },
+            lightningEndpoint
+    );
+
+
+  </script>
+
+
+</html>
